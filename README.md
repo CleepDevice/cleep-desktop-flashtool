@@ -1,4 +1,4 @@
 # cleep-desktop-flash-tool
 Flash tool for Cleep-desktop
 
-Repackaged cool cross-platform Balena tool provided by resio.io
+Repackaged cool cross-platform balena-cli provided by [balena.io](https://www.balena.io/)
