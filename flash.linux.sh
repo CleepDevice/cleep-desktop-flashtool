@@ -29,17 +29,17 @@ then
     echo "partition=$partition" >> $LOGFILE
 
     # mount first drive partition (should be root one in fat32)
-    /bin/mkdir /tmp/raspiot_root
-    /bin/mount /dev/$partition /tmp/raspiot_root
+    /bin/mkdir /tmp/cleep_root
+    /bin/mount /dev/$partition /tmp/cleep_root
 
     # then copy file
-    echo "Copy $4 file to /tmp/raspiot_root/cleep-network.conf" >> $LOGFILE
-    /bin/cp -f "$4" /tmp/raspiot_root/cleep-network.conf >> $LOGFILE
+    echo "Copy $4 file to /tmp/cleep_root/cleep-network.conf" >> $LOGFILE
+    /bin/cp -f "$4" /tmp/cleep_root/cleep-network.conf >> $LOGFILE
 
     # and umount/clean properly
     /bin/sync
-    /bin/umount -lf /tmp/raspiot_root
-    /bin/rmdir /tmp/raspiot_root
+    /bin/umount -lf /tmp/cleep_root
+    /bin/rmdir /tmp/cleep_root
 fi
 
 dt=$(date '+%d/%m/%Y %H:%M')
