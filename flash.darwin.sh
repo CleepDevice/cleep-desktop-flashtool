@@ -13,7 +13,7 @@ echo "START $dt" >> $LOGFILE
 echo "params=$1 $2 $3 $4" >> $LOGFILE
 
 # flash drive
-"$1/balena" "$3" --drive "$2" --yes
+"$1/balena" "$3" --drive "$2" --yes --unsupported
 ret=$?
 echo "balena-cli returncode=$ret" >> $LOGFILE
 if [ $ret != 0 ]

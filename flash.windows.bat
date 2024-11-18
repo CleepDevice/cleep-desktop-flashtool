@@ -11,7 +11,7 @@ echo START %date% %time% >> %logfile%
 echo params=%1 %2 %3 %4 >> %logfile%
 
 :: flash drive
-%1\balena.exe local flash %3 --drive %2 --yes
+%1\balena.exe local flash %3 --drive %2 --yes --unsupported
 echo balena-cli returncode=%ERRORLEVEL% >> %logfile%
 if %ERRORLEVEL% NEQ 0 ( echo END %date% %time% >> %logfile% & exit %ERRORLEVEL% )
 
