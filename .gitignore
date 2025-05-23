@@ -1,2 +1,5 @@
 dist/
+flashtool/
 *.zip
+*.exe
+*.AppImage
